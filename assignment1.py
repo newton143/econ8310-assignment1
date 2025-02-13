@@ -5,8 +5,7 @@ from pygam import LinearGAM, s
 import pickle
 
 # Load Training Data
-train_path = r"C:\Python\GitHub\BusinessForecasting\Assignments\econ8310-assignment1\assignment_data_train.csv"
-df_train = pd.read_csv(train_path, parse_dates=['Timestamp'])
+df_train = pd.read_csv("https://github.com/dustywhite7/econ8310-assignment1/raw/main/assignment_data_train.csv", parse_dates=['Timestamp'])
 df_train['Timestamp'] = pd.to_datetime(df_train['Timestamp'])
 df_train.set_index('Timestamp', inplace=True)
 
@@ -35,8 +34,7 @@ with open("model.pkl", "wb") as f:
 y_pred_train = model.predict(X_train)
 
 # Load Test Data
-test_path = r"C:\Python\GitHub\BusinessForecasting\Assignments\econ8310-assignment1\assignment_data_test.csv"
-df_test = pd.read_csv(test_path, parse_dates=['Timestamp'])
+df_test = pd.read_csv("https://github.com/dustywhite7/econ8310-assignment1/raw/main/assignment_data_test.csv", parse_dates=['Timestamp'])
 df_test['Timestamp'] = pd.to_datetime(df_test['Timestamp'])
 df_test.set_index('Timestamp', inplace=True)
 
