@@ -18,7 +18,7 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir) 
 
-from assignment1.ipynb import model, modelFit, pred
+from assignment1 import model, modelFit, pred
 
 # Run the checks
 
